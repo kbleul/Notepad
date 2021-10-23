@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="front.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="frontjquer.js"></script>
+    <title>K`Notes
+    </title>
+  </head>
+<body onunload="save_counter();">
+    
+    <article class="front_page_wrapper">
+             <header class="front_page_header flex">
+                 <H2 id="knote" class="title--primary">K`Note</H2>
+                 <button id="delete_btn">Delete</button>
+
+                 <div class="add_icon flex">
+                   
+                  <button id="cancel_select_btn">❌</button>
+                  <img id="add_notes" src="https://drive.google.com/uc?id=1kpG485Zo26Bd99UGpE6m8FjEg8laneYg/view?usp=sharing" alt="add_notes_icon">
+                  <img src="https://drive.google.com/file/d/1JPTVgfF-iu3jjbT21G4xcOntswRoQ4Or/view?usp=sharing" alt="menu button" id="menu_img">
+                 </div>
+             </header>
+      
+             
+               <ul id="dropdown_menu">
+                 <li><button id="select_btn">Select</button></li>
+                 <li><button id="selectall_btn">Select All</button></li>
+
+               </ul>
+
+            <main class="front_page">
+        
+              <p class="place_holder">No notes yet ...</p>
+
+            </main>
+
+            <main class="notes_page-all_note_holder " id="notes_holder">
+              
+            </main>
+
+            <section class="note_display_wrapper ">
+              <header id="note_display_header" class="flex">
+                <button id="back_to_notes_btn">🔙</button>
+                <button id="save_edited">save</button>
+              </header>
+              <main id="note_display_zone" class="note_display_zone">
+
+               
+
+              </main>
+            </section>
+          
+    </article>
+
+    <article class="input_page_wrapper">
+
+            <header class="input_page_header flex">
+
+             
+
+              <div class="cancel_save">
+                <ul class="flex">
+                  <li class="cancel_save--list">cancel</li>
+                  <li class="cancel_save--list">save</li>
+
+                </ul>
+              </div>
+            </header>
+
+            <main class="input_page-front_page">
+              
+             
+                  <input type="text" name="note_title" id="input_title" placeholder="Enter title" />
+                  <textarea name="input_note" id="input_note" rows="10" placeholder="Add memo..." required >
+                  </textarea>
+
+            </main>
+
+
+    </article>
+
+  
+
+             
+<footer>         
+  
+  
+  <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+   <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/those-icons"
+         title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/"
+          title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel
+             perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel 
+            perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title=
+            "Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from 
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from 
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+          <div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">
+            Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com
+            </a></div>
+
+</footer>
+
+     <script>
+        
+
+        add_notes.addEventListener("click" , show_input_form);
+
+        cancel_save[0].addEventListener("click" , cancel_note);
+
+     </script>
+
+    <link rel="stylesheet" href="index.css">
+
+</body>
+
+</html>
+
