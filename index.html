@@ -14,25 +14,60 @@
 <body onunload="save_counter();">
     
     <article class="front_page_wrapper">
+      
              <header class="front_page_header flex">
                  <H2 id="knote" class="title--primary">K`Note</H2>
                  <button id="delete_btn">Delete</button>
 
                  <div class="add_icon flex">
-                   
-                  <button id="cancel_select_btn">❌</button>
-                  <img id="add_notes" src="https://drive.google.com/uc?id=1kpG485Zo26Bd99UGpE6m8FjEg8laneYg/view?usp=sharing" alt="add_notes_icon">
-                  <img src="https://drive.google.com/file/d/1JPTVgfF-iu3jjbT21G4xcOntswRoQ4Or/view?usp=sharing" alt="menu button" id="menu_img">
+                  <button id="cancel_select_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="2em" 
+                    height="2em"  
+                    viewBox="0 0 24 24"
+                    ><g stroke-width="1.5" fill="none"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke="red" stroke-linecap="round" stroke-linejoin="red"/></g></svg>
+                  </button>
+
+                  <button id="add_notes" class="svg_btn">
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="3em" 
+                      height="3em" 
+                      viewBox="0 0 32 32"
+                      >
+                      <path d="M16 2A14.172 14.172 0 0 0 2 16a14.172 14.172 0 0 0 14 14a14.172 14.172 0 0 0 14-14A14.172 14.172 0 0 0 16 2zm8 15h-7v7h-2v-7H8v-2h7V8h2v7h7z" 
+                      id = "add_svg" />
+                    </svg>
+
+                    </button>
+
+                  
+                    <div id="svgbtn_plus_dropdowm">
+                    <button id="menu_btn" class="svg_btn">
+                      
+                      <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="3em" 
+                      height="3em" 
+                      viewBox="0 0 32 32"
+                      ><circle cx="16" cy="8" r="2"  class = "menu_svg"/>
+                      <circle cx="16" cy="16" r="2"  class = "menu_svg"/>
+                      <circle cx="16" cy="24" r="2"  class = "menu_svg"/>
+                    </svg>
+                    
+                    </button>
+
+                    <ul id="dropdown_menu">
+                      <li><button id="select_btn">Select</button></li>
+                      <li><button id="selectall_btn">Select All</button></li>
+     
+                    </ul>
+                    </div>
                  </div>
              </header>
       
              
-               <ul id="dropdown_menu">
-                 <li><button id="select_btn">Select</button></li>
-                 <li><button id="selectall_btn">Select All</button></li>
-
-               </ul>
-
+         
             <main class="front_page">
         
               <p class="place_holder">No notes yet ...</p>

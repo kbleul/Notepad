@@ -200,7 +200,7 @@ $(document).ready(function(){
 
 
 
-  document.getElementById("menu_img").addEventListener("click", 
+  document.getElementById("menu_btn").addEventListener("click", 
   () => {
     $("#dropdown_menu").slideToggle(100)
   })
@@ -212,8 +212,9 @@ $(document).ready(function(){
     $("#knote").toggle(300);
     $("#delete_btn").toggle(500);
     $("add_notes").toggle(300);
-    $("menu_img").toggle(350);
-    $("#cancel_select_btn").toggle(400)
+    $("menu_btn").toggle(350);
+    $("#cancel_select_btn").toggle(400);
+    $(".svg_btn").toggle(300);
 
     appendCheckbox(false);
 
@@ -225,8 +226,10 @@ $(document).ready(function(){
     $("#knote").toggle(300);
     $("#delete_btn").toggle(500);
     $("add_notes").toggle(300);
-    $("menu_img").toggle(350);
-    $("#cancel_select_btn").toggle(400)
+    $("menu_btn").toggle(350);
+    $("#cancel_select_btn").toggle(400);
+    $(".svg_btn").toggle(300);
+
 
     appendCheckbox(true);
 
@@ -238,8 +241,9 @@ $(document).ready(function(){
     $("#knote").toggle(300);
     $("#delete_btn").toggle(500);
     $("add_notes").toggle(300);
-    $("menu_img").toggle(350);
+    $("menu_btn").toggle(350);
     $("#cancel_select_btn").toggle(400);
+    $(".svg_btn").toggle(300);
 
     $("#notes_holder").html(tempnotes);
     tempnotes = "";
@@ -267,8 +271,9 @@ $(document).ready(function(){
     $("#knote").toggle(300);
     $("#delete_btn").toggle(500);
     $("add_notes").toggle(300);
-    $("menu_img").toggle(350);
+    $("menu_btn").toggle(350);
     $("#cancel_select_btn").toggle(400);
+    $(".svg_btn").toggle(300);
 
 
     deletelist = [];
