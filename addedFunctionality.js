@@ -20,16 +20,11 @@
 
      let i = 1;
 
-       if(i === parseInt(window.localStorage.getItem("saved_counter") ) )
-       { console.log(i + "test2"); }
-
     while(i<= parseInt(window.localStorage.getItem("saved_counter") ) ){
 
         let notes = window.localStorage.getItem(i);
       document.getElementsByClassName("notes_page-all_note_holder")[0].prependChild(notes);
 
-      console.log("hii test 2");
-      
       i++;
     }  
    
@@ -47,7 +42,6 @@
 
   const cancel_note = () => {
   
-    
       let form_title = document.getElementById("input_title")
       let form_text = document.getElementById("input_note");
 
@@ -56,10 +50,7 @@
 
       front_page_wrapper[0].style.display = "block";
       input_page_wrapper[0].style.display = "none";
-       // $("#preview").empty().html("<p>No image has been selected</p>");
-       // document.getElementById("form").style.display = "none";
   }
-
 
 
   const showSavedNotes = event => {
@@ -71,7 +62,6 @@
      document.getElementsByClassName("single_note_wrapper").length);
 
  console.log(document.getElementsByClassName("single_note_wrapper").length);
-  //  window.localStorage.setItem("counter", 0);
     
   }
 

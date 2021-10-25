@@ -14,9 +14,6 @@ $(document).ready(function(){
   let counter_two = 0;
   let deletelist;
 
-  console.log("onload test..hiii");
-  console.log("savecounter" + window.localStorage.getItem("saved_counter"))
-    
   while(i_temp <= parseInt(window.localStorage.getItem("saved_counter"))) {
 
     let notes = window.localStorage.getItem(i_temp);
@@ -36,12 +33,10 @@ $(document).ready(function(){
     
       showSingleNote();
 
-
-        ///////////////////////////////////////
       });
 
           $(".notes_page-all_note_holder:eq(0)").prepend(section_creator).show();
-          console.log(" ohhhh yes");
+          
           i_temp++;
     
   }
@@ -166,15 +161,9 @@ $(document).ready(function(){
       showSingleNote();
    });
 
-    
-            // window.localStorage.setItem("counter", note_counter );
-
              window.localStorage.setItem($(".single_note_wrapper").length,  note_holder );
 
-      //show / display note..to edit or view single note
-   
-
-//$(".single_note_wrapper").click(showSingleNote);
+ $(".single_note_wrapper").click(showSingleNote);
 
 });
 
@@ -205,7 +194,6 @@ $(document).ready(function(){
     $("#dropdown_menu").slideToggle(100)
   })
 
-//////////////////////////////////////////////////////////
   document.getElementById("select_btn").addEventListener("click", 
   () => {
     $("#dropdown_menu").slideToggle(300);
@@ -230,6 +218,7 @@ $(document).ready(function(){
     $("#cancel_select_btn").toggle(400);
     $(".svg_btn").toggle(300);
 
+    
 
     appendCheckbox(true);
 
@@ -237,13 +226,13 @@ $(document).ready(function(){
 
   document.getElementById("cancel_select_btn").addEventListener("click", 
   () => {
-  //  $("#dropdown_menu").slideToggle(300);
     $("#knote").toggle(300);
     $("#delete_btn").toggle(500);
-    $("add_notes").toggle(300);
+    $("add_notes").toggle(300);preserveAspectRatio="xMidYMid meet"
     $("menu_btn").toggle(350);
     $("#cancel_select_btn").toggle(400);
     $(".svg_btn").toggle(300);
+
 
     $("#notes_holder").html(tempnotes);
     tempnotes = "";
@@ -256,7 +245,6 @@ $(document).ready(function(){
   
         showSingleNote();
      });
- //   document.getElementById("notes_holder").html = tempnotes;
 
   })
 
@@ -280,33 +268,15 @@ $(document).ready(function(){
     let checkbox = document.querySelectorAll(".checkbox");
 
     checkbox.forEach(tempcheck => {
-
-      console.log($(tempcheck).is(":checked"))
       if($(tempcheck).is(":checked"))
-      {  
-          deletelist.push(seccounter);
-         //   $(notesection[seccounter]).addClass("deletelist");
- // console.log(notesection.length)
+      {   deletelist.push(seccounter);  }
 
-      }
     seccounter++;
 
     });
 
     deleteSelectedElements(deletelist);
-    console.dir(deletelist)
   })
-
-
-//////////////////////////////////////////////////////////
-
- /*   $("#menu_img").click(function(){
-
-    window.localStorage.clear();
-    $(".single_note_wrapper").remove();
-    note_counter = 0;
-    });
-*/
 
 
 });
@@ -342,21 +312,15 @@ deleteSelectedElements = (deleteitem_indexarr) => {
 
 
   let notesec = document.querySelectorAll(".single_note_wrapper");
-  console.log("sec size " + notesec.length)
   for(let i = 0 ; i < deleteitem_indexarr.length ; i++)
-  {
-    $(notesec[deleteitem_indexarr[i]]).addClass("deletelist");
-    console.log("delete list " + deleteitem_indexarr[i])
-  }
+  {  $(notesec[deleteitem_indexarr[i]]).addClass("deletelist");  }
   
 document.querySelectorAll('.deletelist').forEach(e => e.remove());
-  //document.querySelectorAll(".deletelist").remove();
   notesec = document.querySelectorAll(".single_note_wrapper");
 
 
   let seccounter = 1;
   window.localStorage.clear();
- // window.localStorage.setItem("saved_counter",notesec.length);
    
      for(let i = notesec.length-1; i >= 0 ; i--)
      {
@@ -424,18 +388,14 @@ showEditForm_eventAdder = () => {
 
       })
 
-      console.log(titleinput)
 
       $(titleinput).val($(title_temp).text());
       $(noteinput).val($(par_temp).text());
       $(".note_display_zone").first().html("").append(titleinput).append(noteinput);
-      //  $(".note_display_zone").html(title_temp).append(note)
 
       $("#note_display_zone").unbind().css("overflow-y" , "initial");;
    $("#save_edited").toggle(300);
    $("#save_edited").unbind();
-
-
 
    $("#save_edited").click(
     function(){
@@ -448,24 +408,15 @@ showEditForm_eventAdder = () => {
 
     }
 
-// ument.getElementById("save_edited").addEventListener("click",)
-
 saveNote = () => {
- // $(orignal_section).addClass("og")
   $(orignal_section).remove();
  
   $(".note_display_zone").hide();
   $(".front_page_header").show();
   $(".note_display_wrapper").hide();
-
-
-
   
     let form_title = $("#edit_title").val();
     let form_text = $("#edit_note").val();
-
-    console.log(form_title)
-    console.log(form_text)
 
       if(form_text == "" || form_text == null)
       {  $(".front_page_wrapper").show();
@@ -580,9 +531,6 @@ let note_paragraph = document.createElement("P");
           title_temp = $(this).find($(".note_title")).clone();
             showSingleNote();
 });
-
-
-      //   window.localStorage.setItem("counter", note_counter );
 
          window.localStorage.setItem($(".single_note_wrapper").length,  note_holder );
 

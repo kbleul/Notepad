@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="front.js"></script>
-    <script src="jquery-3.6.0.js"></script>
+    <script src="addedFunctionality.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="frontjquer.js"></script>
     <title>K`Notes
     </title>
@@ -80,7 +80,13 @@
 
             <section class="note_display_wrapper ">
               <header id="note_display_header" class="flex">
-                <button id="back_to_notes_btn">🔙</button>
+                <button id="back_to_notes_btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  width="2em" 
+                  height="2em" 
+                  viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23a1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2z"/></svg>
+                </button>
                 <button id="save_edited">save</button>
               </header>
               <main id="note_display_zone" class="note_display_zone">
