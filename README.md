@@ -7,5 +7,5 @@
   ### html css3 js and jquery
 
 ##Hosted at 
-   seka-cards-game-kbleul.vercel.app
+   http://seka-cards-game-kbleul.vercel.app
    https://seka-card-game.netlify.app
